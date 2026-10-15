@@ -41,7 +41,7 @@ Le flux de travail complet est dans [`docs/REPRENDRE_LE_PROJET.md`](docs/REPREND
 - [ ] Textes divers, phrases de PNJ, descriptions d'objets (SQL)
 - [ ] Sorts techniques / PNJ restants, vérification en jeu
 
-Version SQL finale prévue : **V0.1** (Release).
+Version SQL disponible : **V0.1** (Release).
 
 ## Contribuer
 
