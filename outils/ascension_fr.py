@@ -22,16 +22,6 @@ DONNEES = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'donnee
 JETONS = re.compile(r'\$\{[^}]*\}|\$\?[a-z]*\d*|\$[a-zA-Z]+\d*|\|c[0-9a-fA-F]{8}|\|r')
 
 
-RANGS_FR = {'Passive':'Passif','Spec Passive':'Passif de spécialisation','Specialization':'Spécialisation','Trigger':'Déclencheur','trigger':'Déclencheur','trigger2':'Déclencheur 2', 'Proc':'Déclenchement','proc':'Déclenchement','Proc 2':'Déclenchement 2','Proc2':'Déclenchement 2','Hidden':'Caché','hidden':'Caché','Deprecated':'Obsolète','DEPRECATED':'OBSOLÈTE', 'Aura':'Aura','aura':'Aura','Aura1':'Aura 1','Aura2':'Aura 2','Buff':'Amélioration','Debuff':'Affaiblissement','Damage':'Dégâts','Heal':'Soins','Healing':'Soins', 'Periodic':'Périodique','Periodic Heal':'Soins périodiques','Shield':'Bouclier','Stun':'Étourdissement','Slow':'Ralentissement','Root':'Enracinement','Sleep':'Sommeil', 'Dispel':'Dissipation','Knockback':'Repoussement','Transform':'Transformation','Visual':'Visuel','Effect':'Effet','Enemy':'Ennemi','Ally':'Allié','Allies':'Alliés', 'Caster':'Lanceur','Refresh':'Rafraîchissement','Resource':'Ressource','Restore':'Restauration','Absorb':'Absorption','Stacks':'Cumuls','Incapacitate':'Incapacitation', 'Passive Pet':'Passif du familier','Passive PVP':'Passif JcJ','Selfcast':'Lancement sur soi','Linked':'Lié','UNUSED':'INUTILISÉ','Delayer':'Retardateur', 'Enemy Trigger':'Déclencheur ennemi','Ally Trigger':'Déclencheur allié','Target Trigger':'Déclencheur de cible','Delay Trigger':'Déclencheur différé','Applier':'Applicateur', 'Area Slow':'Ralentissement de zone','Crit Bonus':'Bonus critique','Healing Reduction':'Réduction des soins','Damage/Movement':'Dégâts/Déplacement','Root & Haste':'Enracinement et hâte', 'Giga Heal':'Soins géants','Blocker':'Bloqueur','Stacker':'Cumulateur','Duration Increaser':'Augmentation de durée','Energize Self':'Énergisation de soi','Generate Ember':'Génération de braise', 'Incarnation':'Incarnation','Trinket':'Bijou','Mana Burn':'Brûlure de mana','Soar':'Envol','Missile Visual':'Visuel de projectile','Radial Expander':'Expanseur radial','Charge Back Down':'Recharge à la baisse', 'Heat Out of Combat Only':'Chaleur hors combat uniquement','ICD':'Délai interne','ICD tracker':'Suivi du délai interne','Selfcast Check':'Vérification du lancement sur soi','Forcecast':'Lancement forcé','Hidden Overheat Bonus':'Bonus de surchauffe caché','DoT':'Dégâts sur la durée', }
-RANGS_FR.update({'Heroic': 'Héroïque', 'Mythic': 'Mythique', 'Challenge': 'Défi'})
-
-
-def rang_fr(en):
-    """Traduction automatique des rangs courants ('Rank 3' -> 'Rang 3')."""
-    m = re.fullmatch(r'Rank (\d+)', en)
-    return ('Rang ' + m[1]) if m else RANGS_FR.get(en)
-
-
 def lire_traductions(chemin=DONNEES):
     """-> {champ: {spell_id: texte_fr}}"""
     out = {c: {} for c in CHAMPS}
@@ -44,29 +34,21 @@ def lire_traductions(chemin=DONNEES):
 
 
 def trouver_source(data, force=None):
-    """Choisit le MPQ qui contient le Spell.dbc anglais le plus complet (le plus de sorts)."""
+    """MPQ contenant le Spell.dbc de reference : le patch-T.MPQ du client Conquest of Azeroth.
+
+    C'est le fichier que le jeu charge en dernier pour les sorts (patch-T passe apres les
+    patchs de royaume comme area-52/patch-D.MPQ) et celui que fournit le paquet client CoA.
+    Utilisez --source pour imposer un autre MPQ.
+    """
     if force:
         return force
-    meilleur = (0, None)
-    for f in glob.glob(os.path.join(data, '**', '*.MPQ'), recursive=True) + glob.glob(os.path.join(data, '**', '*.mpq'), recursive=True):
-        nom = os.path.basename(f).lower()
-        if nom == 'patch-t.mpq' or os.sep + 'frfr' + os.sep in f.lower():
-            continue  # on ne relit ni notre propre patch ni la locale francaise
-        try:
-            m = MPQ(f)
-            bi = m.find(SPELL)
-            if bi is None:
-                continue
-            d = m.read(SPELL, bi)
-            n = struct.unpack_from('<I', d, 4)[0]
-            if n > meilleur[0]:
-                meilleur = (n, f)
-        except Exception as e:
-            print('  ignore', f, e, file=sys.stderr)
-    if not meilleur[1]:
-        sys.exit('Aucun Spell.dbc trouve dans ' + data)
-    print(f'Source : {meilleur[1]} ({meilleur[0]} sorts)')
-    return meilleur[1]
+    p = os.path.join(data, 'patch-T.MPQ')
+    if not os.path.exists(p):
+        sys.exit('patch-T.MPQ introuvable dans ' + data + ' (utilisez --source)')
+    if MPQ(p).find(SPELL) is None:
+        sys.exit('Pas de Spell.dbc dans ' + p + ' (utilisez --source)')
+    print('Source :', p)
+    return p
 
 
 def charger_dbc(args):
@@ -96,7 +78,7 @@ def construire(args):
         sid = d.u(r, 0)
         for champ, f in CHAMPS.items():
             en = texte_en(d, r, f)
-            t = tr[champ].get(sid) or (rang_fr(en) if champ == 'Rank' else None)
+            t = tr[champ].get(sid)
             if t and t != en:
                 p = ajouter(t)
                 for g in (f, f + 2):  # emplacement enUS + son miroir

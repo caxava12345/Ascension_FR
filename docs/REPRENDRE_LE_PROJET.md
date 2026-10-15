@@ -3,7 +3,6 @@
 ## 1. Comprendre le principe
 - Le client reste **enUS**. `Spell.dbc` contient chaque texte de sort dans plusieurs emplacements (Nom, Rang, Description, Infobulle) ; le français est écrit dans l'emplacement anglais **et** son miroir (+2).
 - Le script lit le `Spell.dbc` anglais de **votre** client (il choisit le MPQ qui en contient le plus de sorts ; `--source` pour imposer un MPQ), applique `donnees/sorts_fr.tsv.gz` et écrit un `patch-T.MPQ` qui ne contient que le `Spell.dbc` modifié.
-- Les rangs courants (`Rank 3`, `Passive`…) sont traduits automatiquement (`Rang 3`, `Passif`).
 
 ## 2. Boucle de travail
 1. `python ascension_fr.py manquants --data <Data>` → `manquants.tsv` : `spell_id`, `champ`, `texte_en`. Triez/filtrez (par ID, par mot-clé de classe) et prenez un lot.
@@ -15,7 +14,8 @@
 ## 3. Pièges connus
 - **Jetons** à conserver : `$s1`, `${…}`, `$?s123[..][..]`, `|cFFRRGGBB…|r`, `$B`, `$g..:..;`, `$l..:..;`, `\r\n`.
 - Les noms de sorts cités dans une description doivent être identiques au nom FR du sort.
-- Le patch publié a été construit sur le client du mainteneur ; une construction sur un autre client peut différer sur quelques centaines de textes (rangs ou infobulles absents de votre `Spell.dbc` source). Rien de bloquant.
+- Partez toujours du `patch-T.MPQ` **d'origine** du paquet CoA (sorts propres au serveur). Le `Spell.dbc` de `area-52/patch-D.MPQ` est celui du client Ascension : plus gros, mais il passe avant patch-T et ne correspond pas au serveur CoA.
+- Certaines traductions héritées contiennent des erreurs (texte d'un autre sort, langue étrangère, jetons modifiés) : `verifier` en signale environ 10 500. À corriger avant d'aller plus loin.
 - Pour le serveur : la table `coa_client_spell_description` remplace certaines descriptions de sorts côté client ; ses traductions sont dans le SQL des Releases.
 
 ## 4. Idées de contributions

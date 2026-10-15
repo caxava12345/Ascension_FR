@@ -15,10 +15,6 @@ class Tests(unittest.TestCase):
         tr = a.lire_traductions()
         self.assertGreater(len(tr['Description']), 1000)
 
-    def test_rangs(self):
-        self.assertEqual(a.rang_fr('Rank 3'), 'Rang 3')
-        self.assertEqual(a.rang_fr('Passive'), 'Passif')
-
     def test_jetons(self):
         self.assertEqual(a.JETONS.findall('$s1 |cff00ff00x|r ${$m1*2}'), ['$s1', '|cff00ff00', '|r', '${$m1*2}'])
 
