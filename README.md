@@ -36,7 +36,7 @@ Le flux de travail complet est dans [`docs/REPRENDRE_LE_PROJET.md`](docs/REPREND
 
 ## Avancement
 
-- [x] Sorts joueur (1 186) et classe Pyromancien, descriptions serveur
+- [x] Sorts joueur (1 186), descriptions serveur
 - [x] PNJ, quêtes, récompenses, noms d'objets (SQL)
 - [ ] Textes divers, phrases de PNJ, descriptions d'objets (SQL)
 - [ ] Sorts techniques / PNJ restants, vérification en jeu
@@ -49,7 +49,7 @@ Voir [`CONTRIBUTING.md`](CONTRIBUTING.md). Une correction = une ligne dans `donn
 
 ## Crédits
 
-LePetitDan (addon de traduction, utilisé comme référence), Blizzard Entertainment (textes d'origine), Project Ascension, communauté AzerothCore.
+LePetitDan (addon de traduction, utilisé comme référence), Blizzard Entertainment (textes d'origine), Project Ascension, communauté AzerothCore, Claude.
 
 Licence MIT pour les outils et les textes français (voir `LICENSE`). Les textes d'origine restent la propriété de leurs ayants droit.
 
