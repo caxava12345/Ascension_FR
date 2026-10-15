@@ -1,0 +1,497 @@
+# categorie	en	fr	note
+race	Human	Humain	
+race	Dwarf	Nain	
+race	Night Elf	Elfe de la nuit	
+race	Gnome	Gnome	
+race	Draenei	Draeneï	invariable au pluriel
+race	Worgen	Worgen	
+race	Orc	Orc	
+race	Undead	Mort-vivant	Joueur : Réprouvé
+race	Forsaken	Réprouvés	
+race	Tauren	Tauren	
+race	Troll	Troll	
+race	Blood Elf	Elfe de sang	
+race	Goblin	Gobelin	
+race	Pandaren	Pandaren	
+race	Void Elf	Elfe du Vide	
+race	Nightborne	Sacrenuit	
+race	Highmountain Tauren	Tauren de Haut-Roc	
+race	Lightforged Draenei	Draeneï sancteforge	
+race	Dark Iron Dwarf	Nain Sombrefer	
+race	Mag’har Orc	Orc mag’har	
+race	Zandalari Troll	Troll zandalari	
+race	Kul Tiran	Kultirassien	
+race	Mechagnome	Mécagnome	
+race	Vulpera	Vulpérin	
+race	Naga	Naga	
+race	Ogre	Ogre	
+race	Murloc	Murloc	
+race	Gnoll	Gnoll	
+race	Kobold	Kobold	
+race	Centaur	Centaure	
+race	Satyr	Satyre	
+race	Harpy	Harpie	
+race	Furbolg	Furbolg	
+race	Quilboar	Huran	
+race	Ethereal	Étherien	
+race	Arakkoa	Arakkoa	
+race	Titan	Titan	
+race	Naaru	Naaru	
+race	Old God	Dieu très ancien	Dieux très anciens
+race	Elemental	Élémentaire	
+race	Dragonkin	Draconide	
+race	Whelp	Dragonnet	
+race	Drake	Drake	
+race	Wyrm	Ver	
+race	Proto-Drake	Proto-drake	
+race	Nerubian	Nérubien	
+race	Vrykul	Vrykul	
+race	Val’kyr	Val’kyr	invariable
+race	Valkyr	Val’kyr	variante
+race	Forest Troll	Troll des forêts	
+class	Warrior	Guerrier	
+class	Paladin	Paladin	
+class	Hunter	Chasseur	
+class	Rogue	Voleur	
+class	Priest	Prêtre	
+class	Death Knight	Chevalier de la mort	
+class	Shaman	Chaman	
+class	Mage	Mage	
+class	Warlock	Démoniste	
+class	Druid	Druide	
+class	Monk	Moine	
+class	Demon Hunter	Chasseur de démons	
+class	Evoker	Évocateur	
+faction	Alliance	Alliance	
+faction	Horde	Horde	
+faction	Scourge	Fléau	
+faction	Burning Legion	Légion ardente	
+faction	Lich King	Roi-liche	
+faction	The Lich King	Le Roi-liche	
+faction	Scarlet Crusade	Croisade écarlate	
+faction	Argent Dawn	Aube d’argent	
+faction	Argent Crusade	Croisade d’argent	
+faction	Cenarion Circle	Cercle cénarien	
+faction	Kirin Tor	Kirin Tor	
+faction	Silver Hand	Main d’argent	
+faction	Ashen Verdict	Verdict des cendres	
+faction	Knights of the Ebon Blade	Chevaliers de la Lame d’ébène	
+faction	Sunreavers	Saccage-soleil	
+faction	Silver Covenant	Union de l’Argent	
+faction	Frenzyheart Tribe	Tribu Frénécœur	
+faction	Oracles	Oracles	
+faction	Wyrmrest Accord	Accord de Repos du ver	
+faction	Sons of Hodir	Fils d’Hodir	
+faction	Kalu’ak	Kalu’ak	
+faction	Horde Expedition	Expédition de la Horde	
+faction	Alliance Vanguard	Avant-garde de l’Alliance	
+faction	Defias Brotherhood	Confrérie Defias	
+faction	Twilight’s Hammer	Marteau du crépuscule	
+faction	Black Dragonflight	Vol draconique noir	
+faction	Red Dragonflight	Vol draconique rouge	
+faction	Blue Dragonflight	Vol draconique bleu	
+faction	Green Dragonflight	Vol draconique vert	
+faction	Bronze Dragonflight	Vol draconique de bronze	
+faction	Aspect	Aspect	Aspects draconiques
+faction	Dragonflight	Vol draconique	
+lieu	Eastern Kingdoms	Royaumes de l’est	
+lieu	Kalimdor	Kalimdor	
+lieu	Outland	Outreterre	
+lieu	Northrend	Norfendre	
+lieu	Azeroth	Azeroth	
+lieu	Stormwind City	Cité de Hurlevent	
+lieu	Stormwind	Hurlevent	
+lieu	Ironforge	Forgefer	
+lieu	Darnassus	Darnassus	
+lieu	Exodar	Exodar	
+lieu	Orgrimmar	Orgrimmar	
+lieu	Thunder Bluff	Les Pitons-du-Tonnerre	
+lieu	Undercity	Fossoyeuse	
+lieu	Silvermoon City	Lune-d’argent	
+lieu	Shattrath City	Shattrath	
+lieu	Dalaran	Dalaran	
+lieu	Booty Bay	Baie-du-Butin	
+lieu	Gadgetzan	Gadgetzan	
+lieu	Ratchet	Cabestan	
+lieu	Elwynn Forest	Forêt d’Elwynn	
+lieu	Durotar	Durotar	
+lieu	Mulgore	Mulgore	
+lieu	Teldrassil	Teldrassil	
+lieu	Dun Morogh	Dun Morogh	
+lieu	Tirisfal Glades	Clairières de Tirisfal	
+lieu	Westfall	Marche de l’Ouest	
+lieu	Barrens	Les Tarides	The Barrens
+lieu	The Barrens	Les Tarides	
+lieu	Stranglethorn Vale	Vallée de Strangleronce	
+lieu	Duskwood	Bois de la Pénombre	
+lieu	Redridge Mountains	Les Carmines	
+lieu	Hillsbrad Foothills	Contreforts de Hautebrande	
+lieu	Arathi Highlands	Hautes-terres Arathies	
+lieu	Badlands	Terres ingrates	
+lieu	Blasted Lands	Terres foudroyées	
+lieu	Swamp of Sorrows	Marais des Chagrins	
+lieu	Burning Steppes	Steppes ardentes	
+lieu	Searing Gorge	Gorge des Vents brûlants	
+lieu	Eastern Plaguelands	Maleterres de l’est	
+lieu	Western Plaguelands	Maleterres de l’ouest	
+lieu	Winterspring	Berceau-de-l’Hiver	
+lieu	Silithus	Silithus	
+lieu	Un’Goro Crater	Cratère d’Un’Goro	
+lieu	Tanaris	Tanaris	
+lieu	Feralas	Féralas	
+lieu	Thousand Needles	Mille pointes	
+lieu	Desolace	Désolace	
+lieu	Dustwallow Marsh	Marécage d’Âprefange	
+lieu	Azshara	Azshara	
+lieu	Felwood	Gangrebois	
+lieu	Ashenvale	Orneval	
+lieu	Stonetalon Mountains	Les Serres-Rocheuses	
+lieu	Moonglade	Reflet-de-Lune	
+lieu	Hellfire Peninsula	Péninsule des Flammes infernales	
+lieu	Zangarmarsh	Marécage de Zangar	
+lieu	Terokkar Forest	Forêt de Terokkar	
+lieu	Nagrand	Nagrand	
+lieu	Blade’s Edge Mountains	Les Tranchantes	
+lieu	Netherstorm	Raz-de-Néant	
+lieu	Shadowmoon Valley	Vallée d’Ombrelune	
+lieu	Borean Tundra	Toundra Boréenne	
+lieu	Howling Fjord	Fjord hurlant	
+lieu	Dragonblight	Désolation des dragons	
+lieu	Grizzly Hills	Les Grisonnes	
+lieu	Zul’Drak	Zul’Drak	
+lieu	Sholazar Basin	Bassin de Sholazar	
+lieu	The Storm Peaks	Pics Foudroyés	
+lieu	Icecrown	Couronne de glace	
+lieu	Wintergrasp	Joug-d’hiver	
+lieu	Crystalsong Forest	Forêt du Chant de cristal	
+lieu	Naxxramas	Naxxramas	
+lieu	Karazhan	Karazhan	
+lieu	Black Temple	Temple noir	
+lieu	Blackrock Mountain	Mont Rochenoire	
+lieu	Molten Core	Cœur du Magma	
+lieu	Blackwing Lair	Repaire de l’Aile noire	
+lieu	Onyxia’s Lair	Repaire d’Onyxia	
+lieu	Zul’Gurub	Zul’Gurub	
+lieu	Ahn’Qiraj	Ahn’Qiraj	
+lieu	Ulduar	Ulduar	
+lieu	Icecrown Citadel	Citadelle de la Couronne de glace	
+lieu	Sunwell Plateau	Plateau du Puits de soleil	
+lieu	Shadowfang Keep	Donjon d’Ombrecroc	
+lieu	Deadmines	Les Mortemines	
+lieu	Wailing Caverns	Cavernes des lamentations	
+lieu	Scholomance	Scholomance	
+lieu	Stratholme	Stratholme	
+lieu	Dire Maul	Hache-tripes	
+lieu	Gnomeregan	Gnomeregan	
+lieu	Uldaman	Uldaman	
+lieu	Maraudon	Maraudon	
+lieu	Dark Portal	Porte des Ténèbres	
+lieu	Twisting Nether	Néant distordu	
+lieu	Emerald Dream	Rêve d’émeraude	
+lieu	Nexus	Nexus	
+lieu	Light’s Hope Chapel	Chapelle de l’Espoir de Lordaeron	
+perso	Arthas Menethil	Arthas Menethil	
+perso	Illidan Stormrage	Illidan Hurlorage	
+perso	Thrall	Thrall	
+perso	Jaina Proudmoore	Jaina Portvaillant	
+perso	Sylvanas Windrunner	Sylvanas Coursevent	
+perso	Anduin Wrynn	Anduin Wrynn	
+perso	Varian Wrynn	Varian Wrynn	
+perso	Tyrande Whisperwind	Tyrande Murmevent	
+perso	Malfurion Stormrage	Malfurion Hurlorage	
+perso	Cairne Bloodhoof	Cairne Sabot-de-Sang	
+perso	Vol’jin	Vol’jin	
+perso	Garrosh Hellscream	Garrosh Hurlenfer	
+perso	Uther the Lightbringer	Uther le Porteur de Lumière	
+perso	Kel’Thuzad	Kel’Thuzad	
+perso	Ragnaros	Ragnaros	
+perso	Onyxia	Onyxia	
+perso	Deathwing	Aile de mort	
+perso	Alexstrasza	Alexstrasza	
+perso	Ysera	Ysera	
+perso	Nozdormu	Nozdormu	
+perso	Malygos	Malygos	
+perso	Kil’jaeden	Kil’jaeden	
+perso	Archimonde	Archimonde	
+perso	Sargeras	Sargeras	
+perso	Gul’dan	Gul’dan	
+perso	Medivh	Medivh	
+perso	Velen	Velen	
+perso	Khadgar	Khadgar	
+perso	An’she	An’she	divinité solaire (CoA)
+perso	Elune	Élune	
+perso	Eluna	Élune	variante
+magie	Light	Lumière	
+magie	Holy	Sacré	adj. : sacré / sacrée
+magie	Shadow	Ombre	
+magie	Void	Vide	
+magie	Fel	gangrené	adj. ; "Fel Fire" = Gangrefeu
+magie	Fel Fire	Gangrefeu	
+magie	Fire	Feu	
+magie	Frost	Givre	
+magie	Nature	Nature	
+magie	Arcane	Arcanes	Dégâts des Arcanes
+magie	Physical	Physique	
+magie	Frostfire	Givrefeu	
+magie	Shadowflame	Ombreflamme	
+magie	Holyfire	Feu sacré	
+magie	Spellfire	Feu-sorcier	
+magie	Spellfrost	Givre-sort	
+magie	Elemental	Élémentaire	
+magie	Magic	Magie	
+magie	Curse	Malédiction	
+magie	Poison	Poison	
+magie	Disease	Maladie	
+magie	Bleed	Saignement	
+magie	Enrage	Enrager	
+magie	Lightning	Foudre	
+magie	Lightning Bolt	Éclair	
+magie	Chain Lightning	Chaîne d’éclairs	
+magie	Fireball	Boule de feu	
+magie	Frostbolt	Éclair de givre	
+magie	Shadow Bolt	Trait de l’ombre	
+magie	Holy Light	Lumière sacrée	
+magie	Flash of Light	Éclair lumineux	
+magie	Divine Shield	Bouclier divin	
+magie	Hammer of Justice	Marteau de la justice	
+magie	Judgement	Jugement	
+magie	Consecration	Consécration	
+magie	Smite	Châtiment	
+magie	Penance	Pénitence	
+magie	Mind Control	Contrôle mental	
+magie	Polymorph	Métamorphose	
+magie	Blink	Transfert	
+magie	Teleport	Téléportation	
+magie	Portal	Portail	
+magie	Summon	Invocation	
+magie	Resurrection	Résurrection	
+magie	Shapeshift	Changeforme	
+magie	Stealth	Camouflage	
+magie	Vanish	Disparition	
+magie	Taunt	Provocation	
+magie	Charge	Charge	
+magie	Heroic Strike	Frappe héroïque	
+magie	Whirlwind	Tourbillon	
+magie	Execute	Exécution	
+magie	Mortal Strike	Frappe mortelle	
+magie	Cleave	Enchaînement	
+magie	Rend	Pourfendre	
+magie	Backstab	Attaque sournoise	
+magie	Eviscerate	Éviscération	
+magie	Sinister Strike	Attaque pernicieuse	
+magie	Totem	Totem	
+magie	Aspect	Aspect	
+magie	Stance	Posture	
+magie	Aura	Aura	
+magie	Seal	Sceau	
+magie	Blessing	Bénédiction	
+magie	Judgement of Light	Jugement de lumière	
+magie	Glyph	Glyphe	
+magie	Talent	Talent	
+magie	Rank	Rang	
+magie	Pet	Familier	
+magie	Minion	Sbire	
+magie	Guardian	Gardien	
+magie	Demon	Démon	
+magie	Undead	Mort-vivant	
+magie	Beast	Bête	
+magie	Humanoid	Humanoïde	
+magie	Dragonkin	Draconien	
+magie	Mechanical	Mécanique	
+magie	Aberration	Aberration	
+magie	Critter	Bestiole	
+magie	Giant	Géant	
+stat	Strength	Force	
+stat	Agility	Agilité	
+stat	Stamina	Endurance	
+stat	Intellect	Intelligence	
+stat	Spirit	Esprit	
+stat	Armor	Armure	
+stat	Attack Power	Puissance d’attaque	
+stat	Ranged Attack Power	Puissance d’attaque à distance	
+stat	Spell Power	Puissance des sorts	
+stat	Haste	Hâte	
+stat	Haste Rating	Score de hâte	
+stat	Critical Strike	Coup critique	
+stat	Critical Strike Rating	Score de critique	
+stat	Hit Rating	Score de toucher	
+stat	Expertise Rating	Score d’expertise	
+stat	Armor Penetration	Pénétration d’armure	
+stat	Defense Rating	Score de défense	
+stat	Dodge Rating	Score d’esquive	
+stat	Parry Rating	Score de parade	
+stat	Block Value	Valeur de blocage	
+stat	Block Rating	Score de blocage	
+stat	Resilience	Résilience	
+stat	Mana	Mana	
+stat	Rage	Rage	
+stat	Energy	Énergie	
+stat	Focus	Focalisation	
+stat	Runic Power	Puissance runique	
+stat	Runes	Runes	
+stat	Combo Points	Points de combo	
+stat	Health	Points de vie	
+stat	Haste Rating	Score de hâte	
+stat	Movement Speed	Vitesse de déplacement	
+stat	Melee	Mêlée	
+stat	Ranged	À distance	
+stat	Weapon Damage	Dégâts des armes	
+stat	Cooldown	Temps de recharge	
+stat	Cast time	Temps d’incantation	
+stat	Threat	Menace	
+stat	Healing	Soins	
+stat	Damage	Dégâts	
+stat	Duration	Durée	
+stat	Range	Portée	
+stat	Yards	Mètres	"yd" -> "m"
+effet	Stun	Étourdissement	verbe : étourdir
+effet	Silence	Silence	verbe : réduire au silence
+effet	Root	Immobilisation	verbe : immobiliser
+effet	Slow	Ralentissement	verbe : ralentir
+effet	Fear	Peur	verbe : effrayer
+effet	Sleep	Sommeil	
+effet	Charm	Charme	
+effet	Banish	Bannissement	
+effet	Disorient	Désorientation	verbe : désorienter
+effet	Incapacitate	Incapacitation	
+effet	Dispel	Dissipation	verbe : dissiper
+effet	Interrupt	Interruption	verbe : interrompre
+effet	Knockback	Repoussement	
+effet	Knocked back	Repoussé	
+effet	Immune	Insensible	
+effet	Immunity	Immunité	
+effet	Absorb	Absorption	
+effet	Shield	Bouclier	
+effet	Crowd Control	Contrôle des foules	
+effet	Taunt	Provocation	
+effet	Resurrect	Ressusciter	
+effet	Soulstone	Pierre d’âme	
+effet	Healthstone	Pierre de soins	
+effet	Hearthstone	Pierre de foyer	
+effet	Flight Master	Maître de vol	
+effet	Innkeeper	Aubergiste	
+effet	Auctioneer	Commissaire-priseur	
+effet	Banker	Banquier	
+effet	Vendor	Marchand	
+effet	Trainer	Instructeur	
+effet	Quest	Quête	
+effet	Dungeon	Donjon	
+effet	Raid	Raid	
+effet	Battleground	Champ de bataille	
+effet	Arena	Arène	
+effet	Guild	Guilde	
+effet	Realm	Royaume	
+effet	Achievement	Haut fait	
+effet	Reputation	Réputation	
+effet	Honor	Honneur	
+effet	Gold	Pièce d’or	pièces d’or
+effet	Silver	Pièce d’argent	
+effet	Copper	Pièce de cuivre	
+effet	Experience	Expérience	
+effet	Level	Niveau	
+effet	Mount	Monture	
+effet	Flying Mount	Monture volante	
+profession	Alchemy	Alchimie	
+profession	Blacksmithing	Forge	
+profession	Enchanting	Enchantement	
+profession	Engineering	Ingénierie	
+profession	Herbalism	Herboristerie	
+profession	Inscription	Calligraphie	
+profession	Jewelcrafting	Joaillerie	
+profession	Leatherworking	Travail du cuir	
+profession	Mining	Minage	
+profession	Skinning	Dépeçage	
+profession	Tailoring	Couture	
+profession	Cooking	Cuisine	
+profession	First Aid	Premiers soins	
+profession	Fishing	Pêche	
+profession	Lockpicking	Crochetage	
+objet	Sword	Épée	
+objet	Axe	Hache	
+objet	Mace	Masse	
+objet	Dagger	Dague	
+objet	Staff	Bâton	
+objet	Polearm	Arme d’hast	
+objet	Bow	Arc	
+objet	Crossbow	Arbalète	
+objet	Gun	Arme à feu	
+objet	Wand	Baguette	
+objet	Shield	Bouclier	
+objet	Thrown	Armes de jet	
+objet	Cloth	Tissu	
+objet	Leather	Cuir	
+objet	Mail	Mailles	
+objet	Plate	Plaques	
+objet	Helm	Casque	
+objet	Shoulders	Épaules	
+objet	Chest	Torse	
+objet	Wrist	Poignets	
+objet	Hands	Mains	
+objet	Waist	Taille	
+objet	Legs	Jambes	
+objet	Feet	Pieds	
+objet	Neck	Cou	
+objet	Back	Dos	
+objet	Finger	Doigt	
+objet	Trinket	Bijou	
+objet	Relic	Relique	
+objet	Totem	Totem	
+objet	Idol	Idole	
+objet	Libram	Libram	
+objet	Sigil	Glyphe	
+objet	Bag	Sac	
+objet	Quiver	Carquois	
+objet	Potion	Potion	
+objet	Elixir	Élixir	
+objet	Flask	Flacon	
+objet	Scroll	Parchemin	
+objet	Recipe	Recette	
+objet	Pattern	Patron	
+objet	Schematic	Schéma	
+objet	Formula	Formule	
+objet	Plans	Plans	
+objet	Design	Dessin	
+objet	Manual	Manuel	
+objet	Reagent	Composant	
+objet	Epic	Épique	
+objet	Rare	Rare	
+objet	Uncommon	Inhabituel	
+objet	Common	Commun	
+objet	Poor	Médiocre	
+objet	Legendary	Légendaire	
+objet	Heirloom	Héritage	
+objet	Soulbound	Lié quand ramassé	
+objet	Binds when picked up	Lié quand ramassé	
+objet	Binds when equipped	Lié quand équipé	
+objet	Unique	Unique	
+objet	Quest Item	Objet de quête	
+coa	Sun Cleric	Clerc solaire	CoA
+coa	Starcaller	Mande-étoiles	CoA
+coa	Pyromancer	Pyromancien	CoA
+coa	Barbarian	Barbare	CoA
+coa	Reaper	Faucheur	CoA
+coa	Tinker	Bricoleur	CoA
+coa	Venomancer	Venimancien	CoA
+coa	Primalist	Primaliste	CoA
+coa	Runemaster	Maître des runes	CoA
+coa	Necromancer	Nécromancien	CoA
+coa	Cultist	Cultiste	CoA
+coa	Chronomancer	Chronomancien	CoA
+coa	Ranger	Rôdeur	CoA
+coa	Blood Mage	Mage de sang	CoA
+coa	Templar	Templier	CoA
+coa	Guardian	Gardien	CoA classe
+coa	Knight of Xoroth	Chevalier de Xoroth	CoA
+coa	Witch Doctor	Sorcier-docteur	CoA
+coa	Witch Hunter	Chasseur de sorcières	CoA
+coa	Stormbringer	Porte-tempête	CoA
+coa	Felsworn	Gangrejuré	CoA
+coa	Bloodforged	Forgé-sang	CoA
+coa	Worldforged	Forgé-monde	CoA
+coa	Mystic Enchant	Enchantement mystique	CoA
+coa	Mystic Scroll	Parchemin mystique	CoA
+coa	Scroll of Knowledge	Parchemin de savoir	CoA
+coa	Vow	Vœu	Clerc solaire
+coa	Solar Power	Puissance solaire	Clerc solaire
+coa	Scattered Stars	Étoiles dispersées	Mande-étoiles
+coa	Lunar Phase	Phase lunaire	Mande-étoiles

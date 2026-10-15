@@ -1,0 +1,8 @@
+Description (champ About, <350 caractères) :
+Traduction française de Conquest of Azeroth / Ascension (WoW 3.3.5) : outils Python pour construire le patch client, trouver les textes manquants, et base de traductions de sorts.
+
+Topics : wow, world-of-warcraft, wotlk, azerothcore, ascension, conquest-of-azeroth, french, francais, translation, localization, dbc, mpq
+
+Nom du dépôt : Ascension_FR
+Licence : MIT   |   Visibilité : Public
+Cocher "Add README" = NON, "Add license" = NON, ".gitignore" = NON (déjà dans le dossier).
