@@ -5,8 +5,10 @@ Commandes :
   python ascension_fr.py construire --data "C:/.../Data" --sortie patch-T.MPQ
   python ascension_fr.py manquants  --data "C:/.../Data" --sortie manquants.tsv
   python ascension_fr.py verifier   --data "C:/.../Data"
+  python ascension_fr.py controle   --data "C:/.../Data" --patch patch-T.MPQ
 
-Le client reste en enUS : le francais est ecrit dans les emplacements anglais du Spell.dbc.
+Mode bilingue : l'anglais d'origine reste dans l'emplacement enUS du Spell.dbc ; le francais est
+ajoute dans les emplacements frFR (2 et 3). Le client affiche l'anglais en enUS, le francais en frFR.
 Aucun fichier du jeu n'est fourni : le script lit VOTRE client.
 """
 import argparse, glob, gzip, os, re, struct, sys
@@ -57,8 +59,8 @@ def charger_dbc(args):
 
 
 def texte_en(d, r, f):
-    """Texte anglais d'un champ : l'emplacement f+2 (miroir) en priorite, sinon f."""
-    return d.sz(d.u(r, f + 2)) or d.sz(d.u(r, f))
+    """Texte anglais d'un champ : toujours l'emplacement enUS (f), jamais modifie par le patch."""
+    return d.sz(d.u(r, f))
 
 
 def construire(args):
@@ -81,13 +83,35 @@ def construire(args):
             t = tr[champ].get(sid)
             if t and t != en:
                 p = ajouter(t)
-                for g in (f, f + 2):  # emplacement enUS + son miroir
-                    struct.pack_into('<I', rec, r * d.rs + g * 4, p)
                 modifs += 1
+            else:
+                p = d.u(r, f)  # pas de traduction : le client frFR affiche l'anglais plutot qu'un vide
+            for g in (f + 2, f + 3):  # emplacements frFR ; l'emplacement enUS (f) n'est jamais touche
+                struct.pack_into('<I', rec, r * d.rs + g * 4, p)
     dbc = b'WDBC' + struct.pack('<IIII', d.n, d.nf, d.rs, len(strs)) + bytes(rec) + bytes(strs)
     write_z(args.sortie, {SPELL: dbc}, ss_shift=7)
-    print(f'{modifs} textes remplaces -> {args.sortie} ({os.path.getsize(args.sortie)//1024//1024} Mo)')
-    print('Copiez-le dans Data/, videz le dossier Cache, gardez la locale enUS.')
+    print(f'{modifs} textes francais ajoutes -> {args.sortie} ({os.path.getsize(args.sortie)//1024//1024} Mo)')
+    print('Copiez-le dans Data/, videz le dossier Cache. Langue : SET locale "frFR" ou "enUS" dans WTF/Config.wtf.')
+
+
+def controle(args):
+    """Verifie qu'un patch ne change pas l'anglais et remplit bien les emplacements frFR."""
+    o, p = charger_dbc(args), DBC(MPQ(args.patch).read(SPELL))
+    if (o.n, o.rs) != (p.n, p.rs):
+        sys.exit('Le patch n a pas la meme structure que la source.')
+    anglais, vides, ecarts = 0, 0, 0
+    for r in range(o.n):
+        for f in CHAMPS.values():
+            en = o.sz(o.u(r, f))
+            if p.sz(p.u(r, f)) != en:
+                anglais += 1
+            fr2, fr3 = p.sz(p.u(r, f + 2)), p.sz(p.u(r, f + 3))
+            vides += bool(en) and not fr2
+            ecarts += fr2 != fr3
+    print(f'anglais modifie : {anglais} | frFR vide alors que l anglais existe : {vides} | emplacements 2 et 3 differents : {ecarts}')
+    ok = anglais == vides == ecarts == 0
+    print('OK' if ok else 'A VERIFIER')
+    sys.exit(0 if ok else 1)
 
 
 def a_traduire(t):
@@ -131,13 +155,14 @@ def verifier(args):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument('commande', choices=['construire', 'manquants', 'verifier'])
+    p.add_argument('commande', choices=['construire', 'manquants', 'verifier', 'controle'])
     p.add_argument('--data', required=True, help='dossier Data du client')
     p.add_argument('--source', help='forcer le MPQ contenant le Spell.dbc anglais')
     p.add_argument('--sortie', default=None)
+    p.add_argument('--patch', help='controle : le patch-T a verifier')
     a = p.parse_args()
     a.sortie = a.sortie or {'construire': 'patch-T.MPQ', 'manquants': 'manquants.tsv'}.get(a.commande)
-    {'construire': construire, 'manquants': manquants, 'verifier': verifier}[a.commande](a)
+    {'construire': construire, 'manquants': manquants, 'verifier': verifier, 'controle': controle}[a.commande](a)
 
 
 if __name__ == '__main__':

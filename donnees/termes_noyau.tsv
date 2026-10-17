@@ -486,8 +486,8 @@ coa	Witch Doctor	Sorcier-docteur	CoA
 coa	Witch Hunter	Chasseur de sorcières	CoA
 coa	Stormbringer	Porte-tempête	CoA
 coa	Felsworn	Gangrejuré	CoA
-coa	Bloodforged	Forgé-sang	CoA
-coa	Worldforged	Forgé-monde	CoA
+coa	Bloodforged	Bloodforged	CoA (reste en anglais)
+coa	Worldforged	Worldforged	CoA (reste en anglais)
 coa	Mystic Enchant	Enchantement mystique	CoA
 coa	Mystic Scroll	Parchemin mystique	CoA
 coa	Scroll of Knowledge	Parchemin de savoir	CoA
@@ -495,3 +495,9 @@ coa	Vow	Vœu	Clerc solaire
 coa	Solar Power	Puissance solaire	Clerc solaire
 coa	Scattered Stars	Étoiles dispersées	Mande-étoiles
 coa	Lunar Phase	Phase lunaire	Mande-étoiles
+coa	Hardcore	Hardcore	CoA (reste en anglais)
+coa	Ascended	Ascended	CoA (reste en anglais)
+coa	Mythic	Mythique	CoA
+coa	Heroic Raid	Raid héroïque	CoA
+coa	Mythic Raid	Raid mythique	CoA
+coa	Hero's Call	L'appel du héros	CoA (quêtes : « L'appel du héros : … »)

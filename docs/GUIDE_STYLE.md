@@ -15,6 +15,15 @@ Un terme déjà traduit dans le projet garde sa traduction (ex. Dawn = Aurore, V
 - Ne pas traduire : noms de joueurs, clés techniques, chemins de fichiers, SQL/colonnes.
 - Texte de quête/PNJ : ton narratif, « vous » au joueur ; garder `$N` `$C` `$R` `$B` `$g`.
 
+## Termes laissés en anglais (décision du projet)
+`Hardcore`, `Ascended`, `Worldforged`, `Bloodforged` ne sont **pas** traduits (partout : sorts, objets, quêtes, interface).
+
+## Termes fixés
+- Mythic = **Mythique** ; Heroic Raid = **Raid héroïque** ; Mythic Raid = **Raid mythique**.
+- Quêtes « Hero's Call » : **« L'appel du héros : … »**.
+- Autres harmonisations : tableau d'appel (Callboard), Tempête de mana (Manastorm), Carte sauvage (Wildcard), Progression du personnage (Character Advancement), enchantement mystique, Marques d'Ascension.
+- En cas de conflit de nom entre deux lots : la version la plus fidèle au lore et au français correct.
+
 ## Cas particuliers adoptés
 - Goldshire = **Comté-de-l'Or** (forme officielle).
 - Pyromancien : Ember = Braise, Flamecasting = Incantation de flammes.

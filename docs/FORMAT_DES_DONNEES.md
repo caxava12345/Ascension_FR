@@ -10,7 +10,8 @@ spell_id	champ	texte_fr
 
 - `champ` ∈ `Name`, `Rank`, `Description`, `Tooltip`.
 - Les retours à la ligne sont écrits `\n` et `\r` (littéraux), les tabulations interdites.
-- Une ligne par couple (sort, champ). Absent = non traduit.
+- Une ligne par couple (sort, champ). Absent = non traduit (le client frFR affichera alors l'anglais).
+- 325 455 lignes dans la version actuelle.
 - Modifier : `gunzip -k`, éditer, `gzip -9`, ou lire/écrire avec `lire_traductions()` de `outils/ascension_fr.py`.
 
 ## `donnees/glossaire.tsv`
